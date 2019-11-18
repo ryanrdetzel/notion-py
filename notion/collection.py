@@ -33,7 +33,7 @@ class NotionDate(object):
             return None
         start = cls._parse_datetime(data.get("start_date"), data.get("start_time"))
         end = cls._parse_datetime(data.get("end_date"), data.get("end_time"))
-        timezone = data.get("timezone")
+        timezone = data.get("time_zone")
         return cls(start, end=end, timezone=timezone)
 
     @classmethod
